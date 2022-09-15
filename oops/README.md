@@ -1,8 +1,8 @@
 ### OOP:
 #### Formal definition:
-    Object-oriented programming (OOP) is a programming paradigm based on the concept of “objects”, which can contain data, in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
+Object-oriented programming (OOP) is a programming paradigm based on the concept of “objects”, which can contain data, in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
 #### Simpler definition:
-     In OOP everything in the world can be classified into classes- for example, you and I are objects of the class “human”. Every Human has two types of features: state (fields: height,weight etc) and behavior (methods: breathing,eating etc). Similarly, an Object in the OOP paradigm has attributes and methods
+In OOP everything in the world can be classified into classes- for example, you and I are objects of the class “human”. Every Human has two types of features: state (fields: height,weight etc) and behavior (methods: breathing,eating etc). Similarly, an Object in the OOP paradigm has attributes and methods
 
 ### Object
 This section describe how object look in java and golang using above 'human' example, 
