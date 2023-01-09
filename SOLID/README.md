@@ -97,3 +97,41 @@ class InvoicePrinter{
 ```
 
 This principle help in maintaing and understanding code.
+
+### Open / Closed principle:
+It states that open for extension but closed for modification
+
+Example:
+```
+class InvoiceDao{
+    private Invoice invoice;
+    public InvoiceDao(Invoice invoice){
+        this.invoice = invoice;
+    }
+    public void saveToDB(){
+        // DB logic
+    }
+}
+```
+
+Suppose above class is tested and running in production. In future there is requirement to add capability to save data in file also.
+
+```
+interface InvoiceDao{
+    public void save()
+}
+
+class DbInvoiceDao implements InvoiceDao{
+    @override
+    public void save(){
+        // logic to save in DB
+    }
+}
+
+class FileInvoiceDao implements InvoiceDao{
+    @override
+    public void save(){
+        // logic to save in file system
+    }
+}
+```
