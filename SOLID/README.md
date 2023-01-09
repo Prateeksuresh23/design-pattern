@@ -135,3 +135,81 @@ class FileInvoiceDao implements InvoiceDao{
     }
 }
 ```
+
+### Liskov Substitution Principle
+
+If class B is subtype of class A then we should be able replace object of A with B without breaking the behaviour of program.
+
+Subclass should extend the capability of parent class but not narrow it down
+
+Example:
+
+```
+interface Bike{
+    public void turnOnEng();
+    public void increaseSpeed();
+}
+
+class MotorCycle implements Bike{
+    public void turnOnEng(){
+        this.isEngineOn = true;
+    }
+
+    public void increaseSpeed(){
+        this.speed = this.speed+10;
+    }
+}
+
+class Bicycle implements Bike{
+    public void turnOnEng(){
+        throw new AssertionError("there is no engine");
+    }
+
+    public void increaseSpeed(){
+        this.speed = this.speed+10;
+    }
+}
+```
+
+### Interface segmented principle
+
+Interface should be such that client should not implement unnecessary function they do not need
+
+Example:
+
+Not following:
+```
+interface ResturantEmployee{
+    public void takeOrder();
+    public void cookFood();
+    public void washDishes();
+}
+
+class Waiter implements ResturantEmployee{
+    public void cookFood(){
+        // Not my job
+    }
+    public void takeOrder(){
+        System.out.println("taking order");
+    }
+    public void washDishes(){
+        // Not my job
+     }
+}
+```
+
+Chages:
+```
+interface WaiterInterface{
+    public void takeOrder();
+    public void serveCustomer;
+}
+
+interface cookInterface{
+    public void cookFood();
+}
+
+interface Helper{
+    public void washDishes();
+}
+```
