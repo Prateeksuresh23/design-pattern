@@ -213,3 +213,36 @@ interface Helper{
     public void washDishes();
 }
 ```
+
+### Dependency Inversion principle
+
+Classes should depend on interfaces rather than conrete classes
+
+Example:
+Interface Keyboard --> two classes WiredKeyBoard and BluetoothKeyboard
+Interface Mouse    --> two classes WiredMouse and BluetoothMouse
+
+```
+class Mac{
+    private final WiredKeyBoard keyboard;
+    private final BluetoothMouse mouse;
+    public Mac(){
+        keyboard = new WiredKeyBoard();
+        mouse = new BluetoothMouse();
+    }
+}
+```
+
+Class mac can have only wirekeyboard and blutoothmouse
+
+changes:
+```
+class Mac{
+    private final KeyBoard keyboard;
+    private final Mouse mouse;
+    public Mac(KeyBoard keyboard, Mouse mouse){
+        keyboard = this.keyboard;
+        mouse = this.mouse;
+    }
+}
+```
