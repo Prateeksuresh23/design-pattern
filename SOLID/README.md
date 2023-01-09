@@ -12,6 +12,9 @@ D - Dependency Inversion Principle
 These principles helps in following:
 1. Easy to mainatain
 2. Easy to understand
+3. Avoid duplicate code
+4. Reduce complexity
+5. Flexible software
 
 ## Details:
 ### Single Responsibility Principle:
@@ -246,3 +249,6 @@ class Mac{
     }
 }
 ```
+
+Reference:
+https://www.youtube.com/watch?v=XI7zep97c-Y&list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW
