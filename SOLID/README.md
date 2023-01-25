@@ -3,7 +3,7 @@
 ```
 S - Single Responsibility
 O - Open / Closed Principle
-L - Liskov Sunstitution Principle
+L - Liskov Substitution Principle
 I - Interface Segmented Principle
 D - Dependency Inversion Principle
 ```
